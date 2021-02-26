@@ -11,6 +11,6 @@ test:
   <<: *default
   database: rails-mister-cocktail_test
 
-  production:
+production:
   <<: *default
   url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
