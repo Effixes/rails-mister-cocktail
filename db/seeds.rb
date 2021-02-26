@@ -13,7 +13,11 @@ Cocktail.destroy_all
 lemon = Ingredient.create!(name: "lemon")
 ice = Ingredient.create!(name: "ice")
 mint = Ingredient.create!(name: "mint leaves")
-
+whiskey = Ingredient.create!(name: "whiskey")
+vodka = Ingredient.create!(name: "vodka")
+gin = Ingredient.create!(name: "gin")
+sirop = Ingredient.create!(name: "sirop")
+jus = Ingredient.create!(name: "jus")
 
 
 misco =Cocktail.create!(name:"Mister Cocktail")

@@ -6,6 +6,8 @@
 
 <%= link_to 'Cocktails', cocktails_path %>
 <%= link_to 'Add doses', new_cocktail_dose_path(@cocktail) %>
-<%# simple form avec liste des ingredients a ajouter %>
-<%# @cocktail.dose.ingredient
-@cocktail.dose.description => 3cl de... %>
+
+<%= link_to "Delete #{@cocktail.name}",
+            cocktail_path(@cocktail),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
