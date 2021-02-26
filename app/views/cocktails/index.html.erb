@@ -3,13 +3,23 @@
   <div class="text-center"><h1> All our cocktails: </h1></div>
   <div class="text-center"><h2> And more... </h2></div>
 </div>
-
-<div class="text-left">
-<% @cocktails.each do |cocktail| %>
-<ul>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-</ul>
-</div>
-<% end %>
-
 <button type="button" class="btn btn-outline-primary"><%= link_to "Be fun, Create a cocktail", new_cocktail_path %></button>
+
+
+
+<div class="container display-flex">
+  <div class="row d-flex justify-content-between">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-12 col-lg-3" id="cocktail-card">
+      <div class="card mt-3" style="width: 18rem;">
+        <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to cocktail.name%></h5>
+          <p class="card-text">lorem ipsum</p>
+          <%= link_to "see detail", cocktail_path(cocktail) %>
+        </div>
+      </div>
+      </div>
+    <% end %>
+  </div>
+</div>
